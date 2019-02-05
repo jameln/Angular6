@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AdvanciaAngular';
+  cp = 'yellow';
+  setValue(value) {
+    console.log('ee' , value);
+    this.cp = value;
+  }
 }
