@@ -1,0 +1,47 @@
+<p [ngStyle]="
+{
+  'color':cl,
+  'font-family':fl,
+  'font-size':sz
+}
+" *ngIf="sz !== '10px'"
+  (click) = "switchcolor()"
+  [ngClass]="{
+    class : est,
+    ca : ca,
+    cls1:cls1,
+    cls2:cls2,
+    cls3:cls3
+  }" >
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi in illo velit, voluptates maxime et eveniet perspiciatis expedita aliquam consectetur, nisi beatae animi fugiat esse. Nisi enim praesentium ratione excepturi!
+</p>
+color :
+<input type="color"  #color (change)="setcolor(color)">
+<br>
+
+font familly :
+<select  #family (change)="setfamily(family)" >
+  <option >Georgia, serif</option>
+  <option >sans-serif</option>
+  <option >serif</option>
+  <option >cursive</option>
+</select>
+<br>
+
+font size :
+<select  #size  (change)="setsize(size)">
+  <option >10px</option>
+  <option>15px</option>
+  <option>20px</option>
+  <option >25px</option>
+</select>
+
+<br>
+font weight :
+<select  #weight  (change)="setweight(weight)">
+  <option >normal</option>
+  <option>lighter</option>
+  <option>bolder</option>
+</select>
+<br>
+<input appRainbow type="text" >
