@@ -6,12 +6,25 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/cv']">CV <span class="sr-only">(current)</span></a>
+          <a class="nav-link" [routerLink]="['/cv']"
+            routerLinkActive="active">CV </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/todo']">TODO</a>
+          <a class="nav-link" [routerLink]="['/todo']"
+          routerLinkActive="active">TODO</a>
         </li>
-
+        <!-- <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/color']"
+            routerLinkActive="active">Couleur</a>
+          </li> -->
       </ul>
+      <!-- <button (click) = "navigateToColor()">To Color</button> -->
+      <select
+      #selectroute
+      (change) = "gotoroute(selectroute.value)" >
+        <option value="todo">todo</option>
+        <option value="cv">cv</option>
+        <option value="color">color</option>
+      </select>
     </div>
   </nav>

@@ -17,6 +17,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { ListeEmbaucheComponent } from './liste-embauche/liste-embauche.component';
 import { APP_ROUTING } from './app.routing';
 import { HeaderComponent } from './header/header.component';
+import { UserdetailComponent } from './userdetail/userdetail.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HeaderComponent } from './header/header.component';
     TodoFormComponent,
     TodoListComponent,
     ListeEmbaucheComponent,
-    HeaderComponent
+    HeaderComponent,
+    UserdetailComponent
   ],
   imports: [
     BrowserModule,

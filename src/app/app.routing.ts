@@ -1,6 +1,8 @@
+import { UserdetailComponent } from './userdetail/userdetail.component';
 import { CvComponent } from './cv/cv.component';
 import { Routes , RouterModule } from '@angular/router';
 import { TodoComponent } from './todo/todo.component';
+import { ColeurComponent } from './coleur/coleur.component';
 
 const ROUTING: Routes = [
   {
@@ -11,6 +13,15 @@ const ROUTING: Routes = [
     path: 'cv' ,
     component: CvComponent
   },
+  {
+    path: 'color/' ,
+    component: ColeurComponent
+  },
+  {
+    path: 'details/:id' ,
+    component: UserdetailComponent
+  },
+
 
 ];
 
