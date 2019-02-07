@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="assets/css/rotating-card.css">
-<div class="row">
+<div class="row" *ngIf="personne">
   <div class="col-md-12 col-sm-12">
       <div class="card-container">
         <div class="card">
@@ -50,6 +50,7 @@
                                 </p>
                             </div>
                         </div>
+                        <button type="button" class="btn btn-primary" (click) = "addEmbauche(personne)">Embaucher</button>
 
                     </div>
                 </div>

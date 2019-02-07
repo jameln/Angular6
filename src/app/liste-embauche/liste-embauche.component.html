@@ -1,0 +1,13 @@
+<div class="containner" *ngIf="personnes.length != 0 ">
+  <b>Liste des personnes embauchées</b>
+  <div class="row">
+    <ol class="list-group-item" >
+      <li class="list-group-item" *ngFor="let per of personnes">
+          <img src="assets/images/{{ per.path }}">
+            {{per.firstname}} : {{per.name}} : {{per.job}}
+            <i class="fa fa-trash text-right" (click) = "removeformembauche(per)" ></i>
+        </li>
+    </ol>
+
+  </div>
+</div>

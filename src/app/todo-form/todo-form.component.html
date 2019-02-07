@@ -1,0 +1,28 @@
+<div class="col-md-6">
+  <ol class="list-group-item">
+    <li  class="list-group-item" *ngFor="let todo of todos">
+        {{todo.name}} : {{todo.desc}}
+         <i class="fa fa-trash text-right" (click) = "removeTodo(todo)" ></i>
+    </li>
+  </ol>
+
+</div>
+<div class="col-md-6">
+
+  <div class="input-group ">
+    <div class="input-group-prepend">
+    </div>
+    <input type="text" class="form-control"
+          [(ngModel)] = name >
+  </div>
+  <div class="input-group ">
+    <input type="text"
+        [(ngModel)] = desc
+        class="form-control" >
+  </div>
+  <button class="btn btn-primary" type="button"
+          #buttonadd
+          (click) = "addTodos()"
+          [disabled] = "( name.length == 0 || desc.length == 0 )" >Add TODO</button>
+
+</div>

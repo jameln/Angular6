@@ -29,7 +29,16 @@ export class ListComponent implements OnInit {
                        '10',
                        'rotating_card_profile3.png'
 
-                  )]
+                  ),
+                  new Personne(
+                    3,
+                    'sara',
+                    'dridi',
+                    'pharmacie',
+                    '10',
+                    'rotating_card_profile.png'
+
+               )]
    }
 
   sendDetailstofadher(personne) {

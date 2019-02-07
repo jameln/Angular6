@@ -1,5 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { Personne } from './../Model/Personne';
+import { MyserviceService } from '../services/myservice.service';
 
 @Component({
   selector: 'app-cv',
@@ -9,9 +10,10 @@ import { Personne } from './../Model/Personne';
 export class CvComponent implements OnInit {
 
   @Input() person = Personne;
-  constructor() { }
+  constructor(private myservice: MyserviceService) { }
 
   ngOnInit() {
+      this.myservice.sayHello();
   }
   sendtodetails(param) {
     this.person = param;

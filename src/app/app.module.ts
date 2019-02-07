@@ -11,6 +11,12 @@ import { ListComponent } from './list/list.component';
 import { ItemComponent } from './item/item.component';
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { RainbowDirective } from './directives/rainbow.directive';
+import { TodoComponent } from './todo/todo.component';
+import { TodoFormComponent } from './todo-form/todo-form.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { ListeEmbaucheComponent } from './liste-embauche/liste-embauche.component';
+import { APP_ROUTING } from './app.routing';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +29,17 @@ import { RainbowDirective } from './directives/rainbow.directive';
     ListComponent,
     ItemComponent,
     NgStyleComponent,
-    RainbowDirective
+    RainbowDirective,
+    TodoComponent,
+    TodoFormComponent,
+    TodoListComponent,
+    ListeEmbaucheComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    APP_ROUTING,
   ],
   providers: [],
   bootstrap: [AppComponent]
