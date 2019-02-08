@@ -20,7 +20,7 @@ import { HeaderComponent } from './header/header.component';
 import { UserdetailComponent } from './userdetail/userdetail.component';
 import { NotfountComponent } from './notfount/notfount.component';
 import { LoginComponent } from './login/login.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +46,7 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     FormsModule,
     APP_ROUTING,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,43 +1,18 @@
 import { Personne } from './../Model/Personne';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PersonneService {
   personnes: Personne [];
-  constructor() {
-    this.personnes = [
-      new Personne(
-                   1,
-                   'jamel',
-                   'nefzi',
-                   'sof eng',
-                   '32',
-                   'rotating_card_profile2.png'
-      ),
-      new Personne(
-                 2,
-                 'takki',
-                 'nefzi',
-                 'sof eng',
-                 '10',
-                 'rotating_card_profile3.png'
-
-            ),
-            new Personne(
-              3,
-              'sara',
-              'dridi',
-              'pharmacie',
-              '10',
-              'rotating_card_profile.png'
-
-         )]
+  apiLink = 'http://localhost:3000/api/personnes';
+  constructor(private http: HttpClient) {
    }
 
    getPersonne() {
-     return this.personnes;
+    return this.http.get<Personne []>(this.apiLink);
    }
 
    findPersonneById(id) {
