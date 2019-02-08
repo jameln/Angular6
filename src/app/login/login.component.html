@@ -1,0 +1,29 @@
+<form #formulaire="ngForm">
+    <input
+      type="email"
+      id="email"
+      class="form-control"
+      name="email"
+      ngModel
+      placeholder="email"
+      required email
+      email
+      #email="ngModel"
+
+      >
+    <input
+      type="password"
+      id="password"
+      class="form-control"
+      name="password"
+      ngModel
+      placeholder="password"
+      required
+      #passwd="ngModel"
+      >
+      <span class="alert alert-danger" *ngIf="!passwd.valid && passwd.touched">password invalid</span>
+<button
+  (click)="login(formulaire)"
+  [disabled]="!formulaire.valid"
+  >Add CV</button>
+</form>

@@ -41,13 +41,6 @@ export class PersonneService {
    }
 
    findPersonneById(id) {
-     this.personnes.forEach(
-       (value , index) => {
-          if (value.id === id) {
-            return  Personne;
-          }
-       }
-     );
-     return null;
+     return this.personnes[id];
    }
 }

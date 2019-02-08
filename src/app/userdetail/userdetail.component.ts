@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserdetailComponent implements OnInit {
 
-  personne: Personne[];
+  personne: Personne;
   index;
   constructor(private activatedRoute: ActivatedRoute, private personneService: PersonneService) { }
 
@@ -18,7 +18,8 @@ export class UserdetailComponent implements OnInit {
     this.activatedRoute.params.subscribe(
       (param) => {
         this.index = param.id;
-        this.personne = this.personneService.findPersonneById(this.index);
+        this.personne = this.personneService.findPersonneById(this.index - 1);
+        console.log(this.personne);
       }
     )
   }

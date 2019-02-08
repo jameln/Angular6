@@ -18,6 +18,8 @@ import { ListeEmbaucheComponent } from './liste-embauche/liste-embauche.componen
 import { APP_ROUTING } from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { UserdetailComponent } from './userdetail/userdetail.component';
+import { NotfountComponent } from './notfount/notfount.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { UserdetailComponent } from './userdetail/userdetail.component';
     TodoListComponent,
     ListeEmbaucheComponent,
     HeaderComponent,
-    UserdetailComponent
+    UserdetailComponent,
+    NotfountComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
